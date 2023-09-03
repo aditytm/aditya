@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: raju
+  namespace: default
+  labels:
+    app: raju
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: raju
+  template:
+    metadata:
+      labels:
+        app: raju
+    spec:
+      containers:
+      - name: raju
+        image: rajjet.azurecr.io/raju:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
