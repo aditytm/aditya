@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: aditya
-        image: khanecr.azurecr.io/aditya:latest
+        image: adityaji.azurecr.io/aditya:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
